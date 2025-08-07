@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hs9JSsPgyIRKK6T2uEJa0PSIqPY/4l0rZ9qcNJn8ssuCt8lbnAavczy9Ir7E4o/OZ9vJzuncPhTJw6BaMi8CJQ==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Rim-Robots_ Biotech\\1.6\\Source\\VT_Personae\\VT_Personae.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\drwp0\\.nuget\\packages\\krafs.publicizer\\2.3.0\\krafs.publicizer.2.3.0.nupkg.sha512",
+    "C:\\Users\\drwp0\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4535\\krafs.rimworld.ref.1.6.4535.nupkg.sha512"
+  ],
+  "logs": []
+}

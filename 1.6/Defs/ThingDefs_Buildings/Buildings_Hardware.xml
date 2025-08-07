@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RRB_HardwareExtractor</defName>
+    <label>hardware decoder</label>
+    <description>An automated decoding machine that floods a persona with mechanites and decodes the personae hardware and creates a codechip from them. The machine will randomly select from the personae firmware and hardware. Most subpersonae will not mind being forced into the machine, but personae will.\n\nExtracting a personae hardware in quick succession will cause the mechanites to corrode the personae from the inside out, killing them in the process. Otherwise, the decoding process causes no lasting harm.\n\nHardware that require archite capsules are too complex to be decoded.</description>
+
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Buildings/HardwareExtractor/HardwareExtractor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <shadowData>
+        <volume>(1.7, 0.8, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(2, 2)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1, 0, 2)</interactionCellOffset>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <designationCategory>Biotech</designationCategory>
+    <uiOrder>3100</uiOrder>
+    <researchPrerequisites>
+      <li>SubpersonaCreation</li>
+    </researchPrerequisites>
+    <building>
+      <buildingTags>
+        <li>Biotech</li>
+      </buildingTags>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
+    </building>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>85</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <idlePowerDraw>50</idlePowerDraw>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+  </ThingDef>
+
+</Defs>

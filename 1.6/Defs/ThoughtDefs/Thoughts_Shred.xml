@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>RRB_ShreddedSubpersonaCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>4</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+		<li>Automatonophobia</li>
+        <li>Psychopath</li>
+        <li>Bloodlust</li>
+        <li>Cannibal</li>
+    </nullifyingTraits>
+    <stages>
+        <li>
+            <label>I shredded a subpersona</label>
+            <description>I dismantled a subpersona, even though it was just a machine, it still just feels wrong.. it looked so human.</description>
+            <baseMoodEffect>-2</baseMoodEffect>
+        </li>
+    </stages>
+  </ThoughtDef> 
+  
+</Defs>

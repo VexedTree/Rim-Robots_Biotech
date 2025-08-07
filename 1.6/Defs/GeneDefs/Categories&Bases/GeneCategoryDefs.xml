@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>RRB_Archite</defName>
+    <label>archite</label>
+    <displayPriorityInXenotype>1005</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  
+  <GeneCategoryDef>
+    <defName>RRB_PersonaCores</defName>
+    <label>AI personal core</label>
+    <displayPriorityInXenotype>705</displayPriorityInXenotype>
+  </GeneCategoryDef>  
+  
+  <GeneCategoryDef>
+    <defName>RRB_PersonaAbility</defName>
+    <label>special abilities</label>
+    <displayPriorityInXenotype>525</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaDisabler</defName>
+    <label>inhibitors</label>
+    <displayPriorityInXenotype>515</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaRepairing</defName>
+    <label>internal</label>
+    <displayPriorityInXenotype>505</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaPsychic</defName>
+    <label>psychics</label>
+    <displayPriorityInXenotype>495</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaMovement</defName>
+    <label>movement</label>
+    <displayPriorityInXenotype>475</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaMood</defName>
+    <label>mood</label>
+    <displayPriorityInXenotype>465</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaTemperature</defName>
+    <label>temperature</label>
+    <displayPriorityInXenotype>455</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaResistanceAndWeakness</defName>
+    <label>resistance and sensitivity</label>
+    <displayPriorityInXenotype>445</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaViolence</defName>
+    <label>violence</label>
+    <displayPriorityInXenotype>435</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaSleep</defName>
+    <label>memory</label>
+    <displayPriorityInXenotype>425</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaPain</defName>
+    <label>pain emulators</label>
+    <displayPriorityInXenotype>415</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  
+  <GeneCategoryDef>
+    <defName>RRB_PersonaMisc</defName>
+    <label>miscellaneous</label>
+    <displayPriorityInXenotype>405</displayPriorityInXenotype>
+  </GeneCategoryDef>  
+  
+  <GeneCategoryDef>
+    <defName>RRB_PersonaBeauty</defName>
+    <label>beauty</label>
+    <displayPriorityInXenotype>315</displayPriorityInXenotype>
+  </GeneCategoryDef>  
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaCosmetic_Body</defName>
+    <label>cosmetic - body frame</label>
+    <displayPriorityInXenotype>295</displayPriorityInXenotype>
+    <displayPriorityInGenepack>-125</displayPriorityInGenepack>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaAptitudes</defName>
+    <label>aptitudes</label>
+    <displayPriorityInXenotype>205</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>RRB_PersonaDrugs</defName>
+    <label>inserts</label>
+    <displayPriorityInXenotype>5</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

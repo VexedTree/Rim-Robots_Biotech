@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Rest -->
+
+  <GeneDef ParentName="RRB_Hardware" Name="RRB_GeneMemoryBase" Abstract="True">
+    <displayCategory>RRB_PersonaSleep</displayCategory>
+    <exclusionTags>
+      <li>Sleep</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <GeneDef ParentName="RRB_GeneMemoryBase">
+    <defName>RRB_AwfulMemory</defName>
+    <label>inefficient defragmentation</label>
+    <description>Personae with this hardware defragment their memory at a terribly slow pace, and in an inefficient manor.</description>
+    <iconPath>UI/Icons/Genes/WorseMemory</iconPath>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <statFactors>
+      <RestFallRateFactor>1.8</RestFallRateFactor>
+    </statFactors>
+    <biostatMet>4</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>defrag</symbol></li>
+        <li><symbol>hiber</symbol></li>
+        <li><symbol>slumb</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>crash</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="RRB_GeneMemoryBase">
+    <defName>RRB_PoorMemory</defName>
+    <label>poor defragmentation</label>
+    <description>Personae with this hardware perform slightly less efficiently when defragmenting their memory.</description>
+    <iconPath>UI/Icons/Genes/BadMemory</iconPath>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <statFactors>
+      <RestFallRateFactor>1.4</RestFallRateFactor>
+    </statFactors>
+    <biostatMet>2</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>defrag</symbol></li>
+        <li><symbol>hiber</symbol></li>
+        <li><symbol>slumb</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>crash</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="RRB_GeneMemoryBase">
+    <defName>RRB_GreatMemory</defName>
+    <label>efficient defragmentation</label>
+    <description>Personae with this hardware defragment their memory at a much faster, and more efficient rate.</description>
+    <iconPath>UI/Icons/Genes/ExcellentMemory</iconPath>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <statFactors>
+      <RestFallRateFactor>0.4</RestFallRateFactor>
+    </statFactors>
+    <biostatMet>-4</biostatMet>
+    <biostatCpx>2</biostatCpx>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>memo</symbol></li>
+        <li><symbol>proc</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+
+    <!-- Components -->
+
+    <GeneDef ParentName="RRB_Hardware" Name="RRB_ComponentsBase" Abstract="True">
+        <exclusionTags>
+            <li>Components</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_ComponentsBase">
+        <defName>RRB_Components_Advanced</defName>
+        <label>advanced inner-components</label>
+        <labelShortAdj>advanced components</labelShortAdj>
+        <description>Personae with this hardware are of higher quality build. They will perform much better than that of a persona of a poorer quality.</description>
+        <iconPath>UI/Icons/Genes/Gears_Advanced</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+		<marketValueFactor>1.25</marketValueFactor>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>1.15</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.15</postFactor>
+            </li>		
+        </capMods>
+        <biostatMet>-4</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>advan</symbol></li>
+				<li><symbol>hyper</symbol></li>
+				<li><symbol>sleek</symbol></li>
+				<li><symbol>ultra</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_ComponentsBase">
+        <defName>RRB_Components_Shoddy</defName>
+        <label>poor inner-components</label>
+        <labelShortAdj>poor quality</labelShortAdj>
+        <description>Personae with this hardware are of poor quality build. This causes breakdowns of internal components that will require inevitable replacements, and they will perform poorer than that of a higher quality persona.</description>
+        <iconPath>UI/Icons/Genes/Gears_BadMinor</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>0.95</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>0.95</postFactor>
+            </li>		
+        </capMods>
+        <biostatMet>3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>built</symbol></li>
+                <li><symbol>handy</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_ComponentsBase">
+        <defName>RRB_Components_Awful</defName>
+        <label>awful inner-components</label>
+        <labelShortAdj>awful components</labelShortAdj>
+        <description>Personae with this hardware are of a terrible quality - they will breakdown frequently and commonly, and will perform all actions much poorer than that of a higher quality persona.</description>
+        <iconPath>UI/Icons/Genes/Gears_BadMajor</iconPath>
+        <displayOrderInCategory>12</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>0.8</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>0.8</postFactor>
+            </li>		
+        </capMods>	
+        <biostatMet>6</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>built</symbol></li>
+                <li><symbol>handy</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- Waste production -->
+
+    <GeneDef ParentName="RRB_Hardware" Name="RRB_WasteProductionBase" Abstract="True">
+        <exclusionTags>
+            <li>Waste</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_WasteProductionBase">
+        <defName>RRB_Waste_Inefficient</defName>
+        <label>inefficient waste reduction</label>
+        <labelShortAdj>wasteful-reactor</labelShortAdj>
+        <description>Personae with this hardware utilize an inefficient reactor cycling process, producing much more waste overall when using a charger.</description>
+        <iconPath>UI/Icons/Genes/MoreWaste</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <statFactors>
+        </statFactors>
+        <biostatMet>4</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>waste</symbol></li>
+				<li><symbol>tox</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_WasteProductionBase">
+        <defName>RRB_Waste_Efficient</defName>
+        <label>efficient waste reduction</label>
+        <labelShortAdj>recycling-reactor</labelShortAdj>
+        <description>Personae with this hardware utilize a much more efficient reactor than most mechanoids, producing less waste overall when using a charger.</description>
+        <iconPath>UI/Icons/Genes/LessWaste</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <statFactors>
+        </statFactors>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>clean</symbol></li>
+                <li><symbol>eco</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- Repairing rate -->
+
+    <GeneDef ParentName="RRB_Hardware" Name="RRB_RepairingRateBase" Abstract="True">
+        <exclusionTags>
+            <li>RepairingRate</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_RepairingRateBase">
+        <defName>RRB_Repairing_Inefficient</defName>
+        <label>inefficient repairing</label>
+        <labelShortAdj>dull-repair</labelShortAdj>
+        <description>Personae with this hardware repair damage half as fast as normal, and consumes double the energy while being repaired.</description>
+        <iconPath>UI/Icons/Genes/SlowRepairs</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+        <statOffsets>
+            <TendSpeed_Synth>0.5</TendSpeed_Synth>
+	        <PersonaEnergyLossPerHP>0.006</PersonaEnergyLossPerHP>
+        </statOffsets>
+        <biostatMet>3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>shoddy</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_RepairingRateBase">
+        <defName>RRB_Repairing_Efficient</defName>
+        <label>efficient repairing</label>
+        <labelShortAdj>adept-repair</labelShortAdj>
+        <description>Personae with this hardware repair damage four times as fast as normal, and consumes less energy while being repaired.</description>
+        <iconPath>UI/Icons/Genes/GoodRepairs</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+        <statOffsets>
+            <TendSpeed_Synth>2</TendSpeed_Synth>
+	        <PersonaEnergyLossPerHP>0.002</PersonaEnergyLossPerHP>
+        </statOffsets>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>built</symbol></li>
+                <li><symbol>handy</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_RepairingRateBase">
+        <defName>RRB_Repairing_SuperEfficient</defName>
+        <label>hyper-efficient repairing</label>
+        <labelShortAdj>hyper-repair</labelShortAdj>
+        <description>Personae with this hardware repair damage four times as fast as normal, and consumes two times as less energy while being repaired.</description>
+        <iconPath>UI/Icons/Genes/ExcellentRepairs</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+        <marketValueFactor>1.25</marketValueFactor>
+        <statOffsets>
+            <TendSpeed_Synth>4</TendSpeed_Synth>
+	        <PersonaEnergyLossPerHP>0.0015</PersonaEnergyLossPerHP>
+        </statOffsets>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>built</symbol></li>
+                <li><symbol>handy</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+  
+
+    <!-- EMP resistance -->
+
+    <GeneDef ParentName="RRB_Hardware" Name="RRB_EMPResistBase" Abstract="True">
+        <displayCategory>ResistanceAndWeakness</displayCategory>
+        <exclusionTags>
+            <li>EMPResistance</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_EMPResistBase">
+        <defName>RRB_EMPResistant_Partial</defName>
+        <label>EMP resistance</label>
+        <labelShortAdj>EMP-resistant</labelShortAdj>
+        <description>Personae with this hardware use advanced internal components that aids in the mitigation of EMP damage.</description>
+        <iconPath>UI/Icons/Genes/EmpResistHalf</iconPath>
+        <displayOrderInCategory>9</displayOrderInCategory>
+		<displayCategory>RRB_PersonaResistanceAndWeakness</displayCategory>
+        <statOffsets>
+            <PersonaEMPResistance>0.5</PersonaEMPResistance>
+        </statOffsets>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>zap</symbol>
+                    <weight>3</weight>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+ 
+    <GeneDef ParentName="RRB_EMPResistBase">
+        <defName>RRB_EMPResistant_Total</defName>
+        <label>EMP immunity</label>
+        <labelShortAdj>EMP-immune</labelShortAdj>
+        <description>Personae with this hardware use advanced internal components that render them completely immune to the effect of EMP damage.</description>
+        <iconPath>UI/Icons/Genes/EmpResist</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+		<displayCategory>RRB_PersonaResistanceAndWeakness</displayCategory>
+        <customEffectDescriptions>
+            <li>EMP immunity</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <PersonaEMPResistance>1</PersonaEMPResistance>
+        </statOffsets>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-4</biostatMet>
+        <symbolPack>
+        <prefixSymbols>
+            <li>
+                <symbol>zap</symbol>
+                <weight>3</weight>
+            </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+	
+    <!-- Bandwidth -->
+
+    <GeneDef ParentName="RRB_Hardware" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>RRB_Bandwidth_Good</defName>
+        <label>decent bandwidth</label>
+        <description>Personae with this hardware have a slight improvement to their mechanoid bandwidth support.</description>
+        <iconPath>UI/Icons/Genes/Bandwidth_Good</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <statOffsets>
+            <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>mech</symbol>
+                    <weight>3</weight>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+ 
+    <GeneDef ParentName="RRB_Hardware" MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>RRB_Bandwidth_Excellent</defName>
+        <label>large bandwidth</label>
+        <description>Personae with this hardware have a substantial boost to their mechanoid bandwidth support.</description>
+        <iconPath>UI/Icons/Genes/Bandwidth_Excellent</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+        <customEffectDescriptions>
+            <li>EMP immunity</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <MechBandwidth>4</MechBandwidth>
+        </statOffsets>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+        <prefixSymbols>
+            <li>
+                <symbol>mech</symbol>
+                <weight>3</weight>
+            </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>	
+	
+</Defs>

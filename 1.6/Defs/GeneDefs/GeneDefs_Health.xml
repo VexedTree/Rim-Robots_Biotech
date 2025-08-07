@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs> 
+  
+	<GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_Poor_Expiration</defName>
+		<label>NOT FUNCTIONAL</label>
+		<description>Personae with this hardware are hard-coded to shutdown and die upon reaching an expiration date of 20 years.</description>
+		<iconPath>UI/Icons/Genes/ExpirePoor</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+		<biostatMet>4</biostatMet>
+	    <exclusionTags>
+	    	<li>Lifespan</li>
+	    </exclusionTags> 		
+	</GeneDef>  
+  
+	<GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_Awful_Expiration</defName>
+		<label>NOT FUNCTIONAL</label>
+		<description>Personae with this hardware are hard-coded to shutdown and die upon reaching an expiration date of only 5 short years.</description>
+		<iconPath>UI/Icons/Genes/ExpireAwful</iconPath>
+		<displayOrderInCategory>21</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+		<biostatMet>7</biostatMet>	
+		<biostatCpx>0</biostatCpx>
+	    <exclusionTags>
+	    	<li>Lifespan</li>
+	    </exclusionTags>		
+	</GeneDef> 
+	
+    <!-- Death -->	
+	
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_VolatileComponents</defName>
+        <label>NOT FUNCTIONAL</label>
+        <labelShortAdj>volatile</labelShortAdj>
+        <description>Personae with this hardware are built with extremely volatile components that will destabilize at the point of death, causing a large and potentially lethal explosion.</description>
+        <iconPath>UI/Icons/Genes/VolatileComps</iconPath>
+        <displayOrderInCategory>25</displayOrderInCategory>
+		<displayCategory>RRB_PersonaRepairing</displayCategory>
+        <biostatMet>3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>boom</symbol>
+                    <weight>3</weight>
+                </li>
+                <li><symbol>explo</symbol></li>
+                <li><symbol>vola</symbol></li>
+                <li><symbol>bomb</symbol></li>
+            </prefixSymbols>
+        </symbolPack>		
+    </GeneDef>		
+
+</Defs>

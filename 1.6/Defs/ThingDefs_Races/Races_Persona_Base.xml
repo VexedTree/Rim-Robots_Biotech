@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BasePersona" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <containedItemsSelectable>true</containedItemsSelectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawHighlight>true</drawHighlight>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <Mass>60</Mass>
+    </statBases>
+    <race>
+      <renderTree>Misc</renderTree>
+    </race>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ITab_Pawn_Slave</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ITab_Pawn_Feeding</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ITab_Genes</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+
+  <ThingDef ParentName="BasePawn" Name="AnimalThingBase" Abstract="True">
+    <statBases>
+	  <Fertility>0</Fertility>
+      <ToxicResistance>1</ToxicResistance>
+	  <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> 
+	  <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+	  <PersonaEnergyLossPerHP>0.015</PersonaEnergyLossPerHP>
+	  <TendSpeed_Synth>1</TendSpeed_Synth>
+	  <MeatAmount>0</MeatAmount>	  
+      <LeatherAmount>0</LeatherAmount>	
+    </statBases>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <hasGenders>true</hasGenders>  
+	  <hasMeat>false</hasMeat>
+      <nameCategory>HumanStandard</nameCategory>
+      <renderTree>Humanlike</renderTree>
+	  <canBePredatorPrey>false</canBePredatorPrey>
+	  <canBeVacuumBurnt>false</canBeVacuumBurnt>
+	  <isImmuneToInfections>true</isImmuneToInfections>
+      <bloodDef>Filth_MachineBits</bloodDef>	  
+      <baseBodySize>1</baseBodySize>
+	  <foodType>4</foodType>
+      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+      <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
+      <canBecomeShambler>false</canBecomeShambler>
+      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+      <anomalyKnowledge>1</anomalyKnowledge>	  	   	  
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>
+      <li>AdministerMechSerumHealer</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">RemovePorcupineQuill</li>
+    </recipes>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li>HumanMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+    <butcherProducts>
+      <Steel>45</Steel>
+      <Plasteel>30</Plasteel>
+    </butcherProducts>		
+    <comps>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+        <baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresImprisonment>true</requiresImprisonment>
+      </li>
+    </comps>
+  </ThingDef>
+  </PawnKindDef>
+  
+</Defs>

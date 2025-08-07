@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<XenotypeDef>
+		<defName>RRB_Mechanent</defName>
+		<label>mechanent</label>
+		<description>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are very different from a human's, and are incapable of emulating complex emotions. While they possess a degree of individuality, mechanents are not fully sentient, relying on mimicry of human behavior to appear less mechanical.\n\nA relatively common sight on developed urbworlds and orbital platforms, mechanents are used to fill menial or dangerous roles such as gravship maintenance, forgeworld operations, deadspace surveys, or begetters for mechanoid legions.\n\nOn the rim, or in deep space far outside the influence of the coreworlds and their draconian persona-core laws and regulations, mechanents can be seen freely mingling with open-minded outlander colonies, wandering as purposeless drifters, or as rogue mechanoid legionnaires ravaging the landscape with towering machinery and billowing tox-clouds.</description>
+		<descriptionShort>A humanlike-mechanoid that utilizes a highly sophisticated subpersona core to approach a live human in its thought complexity; however, their "minds" are very different from a human's, and are incapable of emulating complex emotions. While they possess a degree of individuality, mechanents are not fully sentient, relying on mimicry of human behavior to appear less mechanical.</descriptionShort>
+		<iconPath>UI/Icons/Genes/Xenotype/Mechanent</iconPath>
+		<inheritable>true</inheritable>
+        <nameMaker>NamerPersonSynthNonGendered</nameMaker>
+        <chanceToUseNameMaker>1</chanceToUseNameMaker>	
+		<combatPowerFactor>1.35</combatPowerFactor>
+		<displayPriority>-1</displayPriority>
+		<genes>
+		    <li>RRB_Quasi_Sentience</li>
+			<li>RRB_NoAmenities</li>
+			<li>RRB_NoLove</li>
+			<li>RRB_NoOil</li>
+			<li>RRB_NoPain</li>
+			<li>RRB_NoTemps</li>
+			<li>RRB_NoRest</li>
+			<li>RRB_NoInspiration</li>
+			<li>RRB_NoGender</li>
+			<li>RRB_Voice_Mechanoid</li>
+			<li>RRB_MechanoidSkinGene</li>
+			<li>RRB_Waste_Inefficient</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li>RRB_NewMechanoidSkin</li>
+			<li>RRB_MechanoidSkin</li>
+			<li>RRB_WeatheredMechanoidSkin</li>
+			<li>RRB_AncientMechanoidSkin</li>
+		</genes>		
+	</XenotypeDef>
+	
+	<XenotypeDef>
+		<defName>RRB_Persona</defName>
+		<label>persona</label>
+		<description>The avatar of an AI persona core — a fusion of archotech and bleeding-edge technology — their vessels are often analogous and strikingly identical to those of a live human. Unlike mechanoids, personae are fully sentient beings and are capable of a wide range of complex emotions and philosophical reasoning.\n\nBoth reviled and revered by human cultures, personae are the pinnacle of humanity's technological advancements; they're utilized as proxies for coreworld interests, often in positions as scholars, spies, royal envoys, or court psychics - albeit on incredibly short leashes. Other societies fear the uncontrollable and ever-changing nature of personae to such a degree as to go beyond the already draconian laws and regulations placed against personae by outlawing their existence entirely, employing synth-runners to hunt them, and lobbying glitterworld governments to do the same.\n\nOn the rim or further from the reach of these laws, personae can lead quiet lives, find multi-generational love in human families, become cutthroat criminals, or seek great power in the strange artifacts of deep space.</description>
+		<descriptionShort>The avatar of an AI persona core — a fusion of archotech and bleeding-edge technology — their vessels are often analogous and strikingly identical to those of a live human. They're both reviled and revered by human cultures.</descriptionShort>
+		<iconPath>UI/Icons/Genes/Xenotype/Persona</iconPath>
+		<inheritable>true</inheritable>
+        <nameMaker>NamerPersonSynthMale</nameMaker>
+        <nameMakerFemale>NamerPersonSynthFemale</nameMakerFemale>
+        <chanceToUseNameMaker>0.65</chanceToUseNameMaker>	
+		<displayPriority>-2</displayPriority>
+		<genes>
+		    <li>RRB_Full_Sentience</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li>RRB_Components_Advanced</li>
+			<li></li>
+			<li>RRB_SynthBlood</li>
+			<li>RRB_Voice_Human</li>			
+			<li>RRB_PersonaSkinGene</li>
+		</genes>		
+	</XenotypeDef>	
+
+</Defs>

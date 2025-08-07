@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Special --> 
+
+  <GeneDef ParentName="RRB_Archite">
+	<defName>RRB_ResurrectionPersona</defName>
+	<label>mechanoid resurrection</label>
+	<description>Personae with this hardware can channel and supercharge the self-repair processes of dead mechanoids. Though not without cost, this process requires briefly splintering the personae' consciousness with the target, and with each consecutive resurrection if not given enough time to recover, the persona may fly into a blind fit of rage and hatred.</description>
+	<iconPath>UI/Icons/Genes/Resurrection</iconPath>
+	<displayOrderInCategory>1</displayOrderInCategory>
+    <displayCategory>RRB_PersonaAbility</displayCategory>			
+    <biostatCpx>3</biostatCpx>
+    <biostatArc>2</biostatArc>		
+	<abilities>
+	  <li>RRB_ResurrectionPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_ResurrectionPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>apoc</symbol></li>
+		<li><symbol>necro</symbol></li>
+		<li><symbol>ress</symbol></li>
+		<li><symbol>mechno</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>riton</symbol></li>
+		<li><symbol>mancer</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>
+  
+    <!-- Jump --> 
+
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_LongjumpPersonaLauncher</defName>
+	<label>long launcher</label>
+	<description>Personae with this hardware utilize a built-in jumppack to jump short distances.</description>
+	<iconPath>UI/Icons/Genes/JumpPack</iconPath>
+	<displayOrderInCategory>10</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-2</biostatMet>	
+	<abilities>
+	  <li>RRB_LongjumpPersonaLauncher</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_LongjumpPersonaLauncher</AbilityDef>
+	</descriptionHyperlinks>
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>jump</symbol></li>
+		<li><symbol>leap</symbol></li>
+		<li><symbol>vault</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>er</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>
+  
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_EMPBolt</defName>
+	<label>NOT FUNCTIONAL</label>
+	<description>Personae with this hardware are capable of unleashing a violent electrical discharge, which is capable of stunning mechanoids, and burning flesh.</description>
+	<iconPath>UI/Icons/Genes/Shock</iconPath>
+	<displayOrderInCategory>11</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-3</biostatMet>
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>zeus</symbol></li>
+		<li><symbol>thun</symbol></li>
+		<li><symbol>bolt</symbol></li>
+		<li><symbol>zap</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>ap</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>  
+  
+    <!-- Pop Abilities -->   
+
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_SmokePopPersona</defName>
+	<label>smokepop</label>
+	<description>Personae with this hardware have specialized vents on their backs which can, in an instant, conceal them in a cloud of smoke.</description>
+	<iconPath>UI/Icons/Genes/SmokePop</iconPath>
+	<displayOrderInCategory>21</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-2</biostatMet>		
+	<abilities>
+	  <li>RRB_SmokePopPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_SmokePopPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>smoke</symbol></li>
+		<li><symbol>haze</symbol></li>
+		<li><symbol>fog</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>pop</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_FirefoamPopPersona</defName>
+	<label>firefoam pop</label>
+	<description>Personae with this hardware have small firefoam cannisters in their backs which can be expelled into the surrounding area to extinguish any nearby flames.</description>
+	<iconPath>UI/Icons/Genes/FoamPop</iconPath>
+	<displayOrderInCategory>22</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-2</biostatMet>		
+	<abilities>
+	  <li>RRB_FirefoamPopPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_FirefoamPopPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<suppressedTraits>
+	  <li>
+		<def>Pyromaniac</def>
+	  </li>
+	</suppressedTraits>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>smoth</symbol></li>
+		<li><symbol>foam</symbol></li>
+		<li><symbol>exting</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>pop</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>
+  
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_ToxPopPersona</defName>
+	<label>toxpop</label>
+	<description>Personae with this hardware have specialized vents on their backs which can rapidly expel compressed tox gas into the surrounding area.</description>
+	<iconPath>UI/Icons/Genes/ToxPop</iconPath>
+	<displayOrderInCategory>23</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-3</biostatMet>		
+	<abilities>
+	  <li>RRB_SmokePopPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_SmokePopPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>choke</symbol></li>
+		<li><symbol>smog</symbol></li>
+		<li><symbol>tox</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>pop</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>  
+  
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_ShieldPopPersona</defName>
+	<label>shield pop</label>
+	<description>Personae with this hardware carry a small shield generator in their backs which can be used to project a protective shield barrier. The shield generator will power down to recharge after a short period.</description>
+	<iconPath>UI/Icons/Genes/ShieldPop</iconPath>
+	<displayOrderInCategory>24</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-4</biostatMet>		
+	<abilities>
+	  <li>RRB_ShieldPopPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_ShieldPopPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>shield</symbol></li>
+		<li><symbol>pala</symbol></li>
+		<li><symbol>guard</symbol></li>
+		<li><symbol>bast</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>pop</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>   
+  
+  <GeneDef ParentName="RRB_Hardware">
+	<defName>RRB_FireBurstPersona</defName>
+	<label>fire burst</label>
+	<description>Personae with this hardware have small cannisters of compressed chemfuel in their backs which can be expelled into the surrounding area, and ignited to wreath the nearby area in flames.</description>
+	<iconPath>UI/Icons/Genes/FirePop</iconPath>
+	<displayOrderInCategory>25</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-4</biostatMet>		
+	<abilities>
+	  <li>RRB_FireBurstPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_FireBurstPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>diab</symbol></li>
+		<li><symbol>flame</symbol></li>
+		<li><symbol>infer</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>burst</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>  
+  
+  <GeneDef ParentName="RRB_Voidware" MayRequire="Ludeon.RimWorld.Anomaly">
+	<defName>RRB_DeadlifePopPersona</defName>
+	<label>deadlife pop</label>
+	<description>Personae with this hardware have specialized vents on their backs which can rapidly expel a dust-like substance into the surrounding area that, upon settling on any nearby corpses, will raise as shamblers.</description>
+	<iconPath>UI/Icons/Genes/DeadlifePop</iconPath>
+	<displayOrderInCategory>26</displayOrderInCategory>
+	<displayCategory>RRB_PersonaAbility</displayCategory>
+	<biostatCpx>2</biostatCpx>
+	<biostatMet>-4</biostatMet>	
+	<abilities>
+	  <li>RRB_DeadlifePopPersona</li>
+	</abilities>
+	<descriptionHyperlinks>
+	  <AbilityDef>RRB_DeadlifePopPersona</AbilityDef>
+	</descriptionHyperlinks>
+	<exclusionTags>
+	    <li>PopHardware</li>
+		<li>Spit</li>
+	</exclusionTags>	
+	<symbolPack>
+	  <prefixSymbols>
+		<li><symbol>necro</symbol></li>
+		<li><symbol>ghou</symbol></li>
+		<li><symbol>dead</symbol></li>
+	  </prefixSymbols>
+	  <suffixSymbols>
+		<li><symbol>pop</symbol></li>
+	  </suffixSymbols>
+	</symbolPack>
+  </GeneDef>   
+	
+</Defs>

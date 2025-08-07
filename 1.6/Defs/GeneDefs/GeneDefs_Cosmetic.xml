@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Frames -->
+
+	<GeneDef>
+		<defName>RRB_MechanoidSkinGene</defName>
+		<label>mechanoid exoskeleton</label>
+		<description>Personae with this hardware have a hard, metallic exoskeleton that makes them appear visually closer to mechanoids than that of their organic counterparts.</description>
+		<iconPath>UI/Icons/Genes/Frames/MechExoskeleton</iconPath>
+		<displayOrderInCategory>22</displayOrderInCategory>
+		<displayCategory>RRB_PersonaCosmetic_Body</displayCategory>
+		<biostatCpx>0</biostatCpx>
+		<labelShortAdj>mechshell</labelShortAdj>
+		<exclusionTags>
+			<li>HairStyle</li>
+			<li>BeardStyle</li>		
+			<li>AG_Bodies</li>
+			<li>Bodies</li>
+			<li>Body</li>
+			<li>Fur</li>
+		</exclusionTags>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<biostatCpx>1</biostatCpx>
+		<selectionWeight>0</selectionWeight>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<fur>RRB_MechanentSkin</fur>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<colorType>Skin</colorType>
+				<useSkinShader>true</useSkinShader>	
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>				
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<statOffsets>
+		    <Flammability>0</Flammability>
+            <ArmorRating_Blunt>0.072</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.185</ArmorRating_Sharp>
+            <ArmorRating_Heat>2.00</ArmorRating_Heat>	 
+    	</statOffsets>		
+		<forcedHeadTypes>
+            <li>None_Basic</li>
+            <li>None_Labor</li>
+            <li>None_Logic</li>	  
+            <li>None_Medic</li>	  
+            <li>None_Recon</li>
+            <li>None_Ghost</li> 
+      	    <li>None_Combat</li> 
+      	    <li>None_Hakita</li>	
+            <li>None_Bipede</li>
+      	    <li>None_Legion</li>	
+            <li>None_Scyther</li>	  	  
+      	    <li>None_Drifter</li>
+            <li>None_Nuclear</li>
+        	<li>None_Slasher</li>
+            <li>None_Penitent</li>
+            <li>None_Socialist</li>
+            <li>None_Wayfinder</li>
+		</forcedHeadTypes>
+        <hairTagFilter>
+            <whitelist>true</whitelist>
+            <tags>
+                <li>Bald</li>
+            </tags>
+        </hairTagFilter>
+        <beardTagFilter>
+            <whitelist>true</whitelist>
+            <tags>
+                <li>NoBeard</li>
+            </tags>
+        </beardTagFilter>			
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+				<hediffToWholeBody>PersonaShader_Hediff</hediffToWholeBody>		
+				<useSkinColorForFur>true</useSkinColorForFur>
+				<useMaskForFur>true</useMaskForFur>
+				<furHidesBody>true</furHidesBody>			
+			</li>
+			<li Class="VT_Personae.PersonaGeneExtensions">
+				<metalhorrorTargetable>false</metalhorrorTargetable>
+			</li>				
+		</modExtensions>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>RRB_PersonaSkinGene</defName>
+		<label>synthetic skin</label>
+		<description>Personae with this hardware have a hard, metallic exoskeleton that makes them appear visually closer to mechanoids than that of their organic counterparts.</description>
+		<iconPath>UI/Icons/Genes/Frames/SynthSkin</iconPath>
+		<displayOrderInCategory>23</displayOrderInCategory>
+		<displayCategory>RRB_PersonaCosmetic_Body</displayCategory>
+		<labelShortAdj>synthskin</labelShortAdj>
+		<exclusionTags>
+			<li>HairStyle</li>
+			<li>BeardStyle</li>		
+			<li>AG_Bodies</li>
+			<li>Bodies</li>
+			<li>Body</li>
+			<li>Fur</li>
+		</exclusionTags>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<biostatCpx>1</biostatCpx>
+		<selectionWeight>0</selectionWeight>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>true</tattoosVisible>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<fur>RRB_PersonaSkin</fur>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<colorType>Skin</colorType>
+				<useSkinShader>true</useSkinShader>	
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>				
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<forcedHeadTypes>
+            <li>Male_Persona</li>
+            <li>Male_PersonaAverage</li>
+            <li>Male_PersonaAverageWide</li>	  
+            <li>Male_PersonaAveragePointy</li>	  
+            <li>Male_PersonaNarrow</li>
+            <li>Male_PersonaNarrowWide</li> 
+      	    <li>Male_PersonaNarrowPointy</li> 
+      	    <li>Female_Persona</li>	
+            <li>Female_PersonaAverage</li>
+      	    <li>Female_PersonaAverageWide</li>	
+            <li>Female_PersonaAveragePointy</li>	  	  
+      	    <li>Female_PersonaNarrow</li>
+            <li>Female_PersonaNarrowWide</li>
+        	<li>Female_PersonaNarrowPointy</li>
+		</forcedHeadTypes>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+				<hediffToWholeBody>PersonaShader_Hediff</hediffToWholeBody>		
+				<useSkinColorForFur>true</useSkinColorForFur>
+				<useMaskForFur>true</useMaskForFur>
+				<furHidesBody>true</furHidesBody>
+			</li>
+		</modExtensions>
+	</GeneDef>	
+	
+	
+	<!-- Voices -->
+	
+    <GeneDef  ParentName="RRB_Hardware" Name="RRB_VoiceBase" Abstract="True">
+        <biostatCpx>0</biostatCpx>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <randomChosen>true</randomChosen>
+		<displayCategory>RRB_PersonaCosmetic_Body</displayCategory>
+        <exclusionTags>
+            <li>Voice</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_VoiceBase">
+        <defName>RRB_Voice_Human</defName>
+        <label>human voice</label>
+        <description>Personae with this hardware use nuanced speech patterns to sound near perfectly human.</description>
+        <iconPath>UI/Icons/Genes/Gene_VoiceHuman</iconPath>
+        <displayOrderInCategory>120</displayOrderInCategory>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_VoiceBase">
+        <defName>RRB_Voice_Mechanoid</defName>
+        <label>mechanoid voice</label>
+        <description>Personae with this hardware have a chirping, droning voice like that of a mechanoid.</description>
+        <iconPath>UI/Icons/Genes/MechanoidVoice</iconPath>
+        <displayOrderInCategory>125</displayOrderInCategory>
+        <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
+        <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+        <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>screecher</symbol></li>
+                <li><symbol>shriller</symbol></li>
+                <li><symbol>chirper</symbol></li>
+                <li><symbol>droner</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>screech</symbol></li>
+                <li><symbol>chirp</symbol></li>
+                <li><symbol>drone</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>screech</symbol></li>
+                <li><symbol>chirp</symbol></li>
+                <li><symbol>shrill</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>	
+	
+    <GeneDef ParentName="RRB_VoiceBase">
+        <defName>RRB_Voice_Construct</defName>
+        <label>construct voice</label>
+        <description>Personae with this hardware use crackly, static-filled voice emulators - sounding similar to the audio feed of a radio.</description>
+        <iconPath>UI/Icons/Genes/ConstructVoice</iconPath>
+        <displayOrderInCategory>130</displayOrderInCategory>
+		<soundCall>Hacking_Started</soundCall>
+        <soundDeath>Hacking_Suspended</soundDeath>
+        <soundWounded>MechBandShockwave</soundWounded>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>metallic</symbol></li>
+                <li><symbol>constructor</symbol></li>
+                <li><symbol>scrapper</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>metal</symbol></li>
+                <li><symbol>constr</symbol></li>
+                <li><symbol>slag</symbol></li>
+                <li><symbol>scrap</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>metallic</symbol></li>
+                <li><symbol>metal</symbol></li>
+                <li><symbol>slag</symbol></li>
+                <li><symbol>scrapper</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>	
+	
+    <GeneDef ParentName="RRB_VoiceBase">
+        <defName>RRB_Voice_Cyborg</defName>
+        <label>groaning voice</label>
+        <description>Personae with this hardware have a deep grating voice.</description>
+        <iconPath>UI/Icons/Genes/CyborgVoice</iconPath>
+        <displayOrderInCategory>135</displayOrderInCategory>
+        <soundCall>Pawn_Mech_Legionary_Call</soundCall>
+        <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+        <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>groaner</symbol></li>
+                <li><symbol>droner</symbol></li>
+                <li><symbol>scrapper</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>groan</symbol></li>
+                <li><symbol>drone</symbol></li>
+                <li><symbol>skriech</symbol></li>
+                <li><symbol>scrap</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>groan</symbol></li>
+                <li><symbol>drone</symbol></li>
+                <li><symbol>scre</symbol></li>
+                <li><symbol>scrap</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>		
+	
+    <GeneDef ParentName="RRB_VoiceBase">
+        <defName>RRB_Voice_Metallic</defName>
+        <label>metallic voice</label>
+        <description>Personae with this hardware have a cold metallic voice.</description>
+        <iconPath>UI/Icons/Genes/MetalPipeVoice</iconPath>
+        <displayOrderInCategory>135</displayOrderInCategory>
+        <soundDeath>BulletImpact_Metal</soundDeath>
+        <soundWounded>BulletImpact_Metal</soundWounded>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>metalli</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>slag</symbol></li>
+                <li><symbol>meta</symbol></li>
+                <li><symbol>scra</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>teel</symbol></li>
+                <li><symbol>tal</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>			
+	
+	
+	<!-- Blood -->
+	
+    <GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_SynthBlood</defName>
+		<label>synthetic-blood</label>
+		<description>Personae with this hardware use synthetic blood to more efficiently carry coolant and bioelectrical currents throughout their circuitry.</description>
+		<iconPath>UI/Icons/Genes/SynthBlood</iconPath>
+		<displayOrderInCategory>500</displayOrderInCategory>
+        <displayCategory>RRB_PersonaCosmetic_Body</displayCategory>		
+		<exclusionTags>
+		    <li>Blood</li>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+		</exclusionTags>
+		<selectionWeight>0</selectionWeight>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+			  <li><symbol>synthblood</symbol></li>
+			</wholeNameSymbols>
+            <prefixSymbols>
+              <li><symbol>synth</symbol></li>
+			  <li><symbol>plas</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+              <li><symbol>droid</symbol></li>
+            </suffixSymbols>
+		</symbolPack>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+				<customBloodIcon>Misc/SynthBlood/SynthBloodIcon</customBloodIcon>
+				<customBloodEffect>RRB_Damage_HitSynth</customBloodEffect>
+				<customBloodThingDef>Filth_SynthBlood</customBloodThingDef>
+				<customBloodSmearThingDef>Filth_SynthBloodSmear</customBloodSmearThingDef>
+				<customWoundsFromFleshtype>VexedSynthetic</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>	
+
+    <GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_OilBlood</defName>
+		<label>oil circulation</label>
+		<description>Personae with this hardware use oil to more efficiently lubricate machinery, and carry bioelectrical currents throughout their circuitry.</description>
+		<iconPath>UI/Icons/Genes/OilBlood</iconPath>
+		<displayOrderInCategory>510</displayOrderInCategory>
+        <displayCategory>RRB_PersonaCosmetic_Body</displayCategory>				
+		<exclusionTags>
+		    <li>Blood</li>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+		</exclusionTags>
+		<selectionWeight>0</selectionWeight>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+			  <li><symbol>oilblood</symbol></li>
+			</wholeNameSymbols>
+            <prefixSymbols>
+              <li><symbol>oil</symbol></li>
+			  <li><symbol>steel</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+              <li><symbol>bot</symbol></li>
+            </suffixSymbols>
+		</symbolPack>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+				<customBloodIcon>Misc/OilBlood/OilBloodIcon</customBloodIcon>
+				<customBloodEffect>RRB_Damage_HitOil</customBloodEffect>
+				<customBloodThingDef>Filth_OilBlood</customBloodThingDef>
+				<customBloodSmearThingDef>Filth_OilBloodSmear</customBloodSmearThingDef>
+				<customWoundsFromFleshtype>VexedMechanical</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>	
+
+    <GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_ChemfuelBlood</defName>
+		<label>chemfuel circulation</label>
+		<description>Personae with this hardware use chemfuel to more efficiently lubricate machinery, and carry bioelectrical currents throughout their circuitry.</description>
+		<iconPath>UI/Icons/Genes/ChemfuelBlood</iconPath>
+		<displayOrderInCategory>520</displayOrderInCategory>
+        <displayCategory>RRB_PersonaCosmetic_Body</displayCategory>				
+		<exclusionTags>
+		    <li>Blood</li>
+			<li>AG_BloodType</li>
+			<li>BloodType</li>
+		</exclusionTags>
+		<selectionWeight>0</selectionWeight>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+			  <li><symbol>chemblood</symbol></li>
+			</wholeNameSymbols>
+            <prefixSymbols>
+              <li><symbol>chem</symbol></li>
+			  <li><symbol>fire</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+              <li><symbol>fuel</symbol></li>
+            </suffixSymbols>
+		</symbolPack>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+				<customBloodIcon>Misc/ChemfuelBlood/ChemfuelBloodIcon</customBloodIcon>
+				<customBloodEffect>RRB_Damage_HitChemfuel</customBloodEffect>
+				<customBloodThingDef>Filth_Fuel</customBloodThingDef>
+				<customBloodSmearThingDef>Filth_FuelSmear</customBloodSmearThingDef>
+				<customWoundsFromFleshtype>VexedChemical</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>	
+	
+</Defs>

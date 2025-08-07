@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FurDef>
+    <defName>RRB_MechanentSkin</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Pawns/Body_Mechanent/Naked_Male</Male>
+      <Female>Pawns/Body_Mechanent/Naked_Female</Female>
+      <Hulk>Pawns/Body_Mechanent/Naked_Hulk</Hulk>
+      <Fat>Pawns/Body_Mechanent/Naked_Fat</Fat>
+      <Thin>Pawns/Body_Mechanent/Naked_Thin</Thin>
+      <Child>Pawns/Body_Mechanent/Naked_Thin</Child>
+      <Baby>Pawns/Body_Mechanent/Naked_Thin</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+  <FurDef>
+    <defName>RRB_PersonaSkin</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Pawns/Body_Persona/Naked_Male</Male>
+      <Female>Pawns/Body_Persona/Naked_Female</Female>
+      <Hulk>Pawns/Body_Persona/Naked_Hulk</Hulk>
+      <Fat>Pawns/Body_Persona/Naked_Fat</Fat>
+      <Thin>Pawns/Body_Persona/Naked_Thin</Thin>
+      <Child>Pawns/Body_Persona/Naked_Thin</Child>
+      <Baby>Pawns/Body_Persona/Naked_Thin</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>  
+
+</Defs>

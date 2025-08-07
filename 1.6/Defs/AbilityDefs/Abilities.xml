@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>RRB_Persona</defName>
+    <displayOrder>1000</displayOrder>
+  </AbilityCategoryDef>  
+  
+    <!-- Special -->   
+
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>RRB_ReimplantXenogerm</defName>
+    <label>encode firmware</label>
+    <description>Encode this personae' firmware into a willing subject using a special mechanite injector. If this personae' firmware were recently encoded, they will encode their firmware and die in the process.\n\nWhen encoded, the firmware will overwrite the target's current programing. Base hardware will be unaffected.</description>
+    <iconPath>UI/Icons/Genes/Implant</iconPath>
+    <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+    <warmupEffecter>Implant_Xenogerm</warmupEffecter>
+    <category>RRB_Persona</category>
+    <displayOrder>500</displayOrder>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>4</warmupTime>
+      <stunTargetOnCastStart>true</stunTargetOnCastStart>
+      <targetParams>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityReimplantXenogerm" />
+    </comps>
+  </AbilityDef>
+  
+  <AbilityDef>
+    <defName>RRB_ResurrectionPersona</defName>
+    <label>resurrect mech</label>
+    <description>Resurrect a recently-killed mechanoid by externally supercharging its self-repair processes. The mechanoid will come back with some but not all of its wounds healed.</description>
+    <iconPath>UI/Abilities/MechResurrection</iconPath>
+    <cooldownTicksRange>20000</cooldownTicksRange><!-- 8h -->
+	<aiCanUse>true</aiCanUse>
+    <warmupStartSound>MechResurrect_Warmup</warmupStartSound>
+    <warmupEffecter>ApocrionAoeWarmup</warmupEffecter>
+    <jobDef>CastAbilityGoToThing</jobDef>
+    <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+    <useAverageTargetPositionForWarmupEffecter>true</useAverageTargetPositionForWarmupEffecter>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases> 
+      <Ability_EffectRadius>5</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>true</drawAimPie>
+      <range>7.9</range>
+      <warmupTime>7</warmupTime>
+      <soundCast>MechResurrect_Cast</soundCast>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetCorpses>true</canTargetCorpses>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_ResurrectMech">
+        <maxCorpseAgeTicks>2800</maxCorpseAgeTicks><!-- 60 seconds -->
+        <costs>
+          <li>
+            <weightClass>Light</weightClass>
+            <cost>1</cost>
+          </li>
+          <li>
+            <weightClass>Medium</weightClass>
+            <cost>4</cost>
+          </li>
+          <li>
+            <weightClass>Heavy</weightClass>
+            <cost>6</cost>
+          </li>
+        </costs>
+        <appliedEffecterDef>MechResurrected</appliedEffecterDef>
+      </li>
+    </comps>
+  </AbilityDef>  
+  
+    <!-- Jump -->  
+
+  <AbilityDef ParentName="LongJumpMech">
+    <defName>RRB_LongjumpPersonaLauncher</defName>
+    <label>jump launcher</label>
+    <description>Jump to a distant location using a built-in jump launcher.</description>
+	<aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <charges>2</charges>
+    <cooldownTicksRange>20000</cooldownTicksRange><!-- 8h -->
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <range>15</range>
+      <minRange>6</minRange>
+      <warmupEffecter>JumpMechWarmupEffect</warmupEffecter>
+      <requireLineOfSight>true</requireLineOfSight>
+      <flightEffecterDef>JumpMechFlightEffect</flightEffecterDef>
+      <flyWithCarriedThing>true</flyWithCarriedThing>
+      <soundLanding>JumpMechLand</soundLanding>
+      <soundCast Inherit="False" />
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+  </AbilityDef>
+  
+    <!-- Pop Abilities -->  
+
+  <AbilityDef>
+    <defName>RRB_SmokePopPersona</defName>
+    <label>smokepop</label>
+    <description>Release compressed smoke from concealed vents. Smoke reduces the accuracy of any shot fired through it, and prevents turrets from locking on entirely.</description>
+    <iconPath>UI/Icons/Genes/SmokePop</iconPath>
+    <cooldownTicksRange>600000</cooldownTicksRange><!-- 10 days -->
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>	
+	<aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>3.9</range>
+	  <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>    
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySmokepop">
+        <smokeRadius>3.5</smokeRadius>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>15</clamorRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>RRB_FirefoamPopPersona</defName>
+    <label>firefoam pop</label>
+    <description>Release a fire-retardant foam in a circular area.</description>
+    <iconPath>UI/Icons/Genes/FoamPop</iconPath>
+    <cooldownTicksRange>300000</cooldownTicksRange><!-- 5 days -->
+	<aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <range>3.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFirefoampop">
+        <firefoamRadius>3.5</firefoamRadius>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>15</clamorRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+  
+  <AbilityDef>
+    <defName>RRB_ToxPopPersona</defName>
+    <label>toxpop</label>
+    <description>Release compressed tox gas from concealed vents. Tox gas burns the lungs and eyes, causing a temporary shortness of breath and reduction in sight. Continued exposure to tox gas results in toxic buildup that can be lethal to those susceptible to it.</description>
+    <iconPath>UI/Icons/Genes/ToxPop</iconPath>
+    <cooldownTicksRange>600000</cooldownTicksRange><!-- 10 days -->
+	<aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <range>3.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="VT_Personae.CompProperties_AbilityToxpop">
+        <toxRadius>3.5</toxRadius>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>15</clamorRadius>
+      </li>
+    </comps>
+  </AbilityDef>  
+  
+  <AbilityDef>
+    <defName>RRB_FireBurstPersona</defName>
+    <label>fire burst</label>
+    <description>Emit a burst of burning fuel in all directions to form puddles of ignited liquid on the ground.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>UI/Icons/Genes/FirePop</iconPath>
+    <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupEffecter>Fire_Burst_Warmup</warmupEffecter>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>2.9</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireBurst">
+        <radius>2.9</radius>
+      </li>
+    </comps>
+  </AbilityDef>  
+  
+  <AbilityDef>
+    <defName>RRB_ShieldPopPersona</defName>
+    <label>shieldpop</label>
+    <description>Generate a spherical shield that .</description>
+    <iconPath>UI/Icons/Genes/ShieldPop</iconPath>
+	<cooldownTicksRange>1200000</cooldownTicksRange><!-- 20 days -->
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <range>2.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySpawn">
+        <thingDef>MechShield</thingDef>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BulletShieldAreaEffect</fleckDef>
+        <sound>BulletShieldGenerator_Reactivate</sound>
+      </li>
+    </comps>
+  </AbilityDef>  
+
+  <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>RRB_DeadlifePopPersona</defName>
+    <label>deadlife pop</label>
+    <description>Release a compressed dust-like substance from concealed vents that, after settling on nearby human and animal corpses, will raise them as shamblers. The shamblers will only attack your enemies.</description>
+    <iconPath>UI/Icons/Genes/DeadlifePop</iconPath>
+    <cooldownTicksRange>900000</cooldownTicksRange><!-- 15 days -->
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>	
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>3.9</range>
+      <drawAimPie>false</drawAimPie>    
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="VT_Personae.CompProperties_AbilityDeadlifepop">
+        <smokeRadius>3.5</smokeRadius>
+        <clamorType>Ability</clamorType>
+        <clamorRadius>15</clamorRadius>
+      </li>
+    </comps>
+  </AbilityDef>  
+
+</Defs>

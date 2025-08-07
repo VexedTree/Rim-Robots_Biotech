@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<HediffDef>
+		<defName>PersonaShader_Hediff</defName>
+		<label>Persona Shader</label>
+		<description>IF YOU SEE THIS HEDIFF REPORT IT TO VEXEDTREE ON STEAM. This hediff applies the CutoutComplex shader to the pawn's body, scuffed - I know.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+        <tendable>false</tendable>		
+		<everCurableByItem>false</everCurableByItem>		
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+        <skinShader>CutoutComplex</skinShader>	
+		<stages>
+		    <li>	
+		        <becomeVisible>false</becomeVisible>
+		    </li>		
+		</stages>		
+	</HediffDef>	
+	
+</Defs>

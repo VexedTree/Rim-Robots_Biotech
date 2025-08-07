@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BasePlayerPersonaKind">
+    <race>Human</race>
+    <combatPower>30</combatPower>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnorePollution>true</apparelIgnorePollution>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <initialWillRange>0~0</initialWillRange>
+    <humanPregnancyChance>0</humanPregnancyChance>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<chemicalAddictionChance>0</chemicalAddictionChance>
+	<defaultFactionDef>PlayerColonySynth</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>	
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <techHediffsDisallowTags>
+      <li>PainCauser</li>
+    </techHediffsDisallowTags>	
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BasePlayerPersonaKind">
+    <defName>Mechanent_Colonist</defName>
+    <label>mechanent</label>
+	<backstoryFiltersOverride Inherit="False">
+      <li>
+        <categories>	
+            <li>BackstoriesSubpersona</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>	
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RRB_Mechanent>999</RRB_Mechanent>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired Inherit="False">
+      <li>Apparel_FlakVest</li>
+    </apparelRequired>	
+    <apparelMoney>320~550</apparelMoney>
+    <techHediffsChance>0.035</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <initialResistanceRange>13~21</initialResistanceRange>	
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BasePlayerPersonaKind">
+    <defName>Persona_Colonist</defName>
+    <label>persona</label>
+	<labelPlural>personae</labelPlural>	
+	<backstoryFiltersOverride Inherit="False">
+      <li>
+        <categories>	
+            <li>BackstoriesPersona</li>
+        </categories>
+      </li>	  
+    </backstoryFiltersOverride>	
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RRB_Persona>999</RRB_Persona>
+      </xenotypeChances>
+    </xenotypeSet>	
+    <apparelMoney>350~600</apparelMoney>
+    <techHediffsChance>0.035</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>	
+	<initialResistanceRange>13~21</initialResistanceRange>	
+  </PawnKindDef>  
+
+</Defs>

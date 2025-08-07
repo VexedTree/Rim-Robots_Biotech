@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>Persona_Leader</defName>
+    <label>persona nexus</label>
+    <labelPlural>persona nexus'</labelPlural>
+    <apparelIgnorePollution>true</apparelIgnorePollution>		
+	<backstoryFiltersOverride Inherit="False">
+      <li>
+        <categories>	
+            <li>BackstoriesPersona</li>
+        </categories>
+      </li>	  
+    </backstoryFiltersOverride>	
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RRB_Persona>999</RRB_Persona>
+      </xenotypeChances>
+    </xenotypeSet>
+    <weaponMoney>355~650</weaponMoney>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelMoney>700~1850</apparelMoney>
+    <apparelTags>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+    </apparelTags>
+    <apparelRequired Inherit="False">
+      <li>Apparel_ArrayHeadset</li>
+	  <li>Apparel_PackControl</li>
+    </apparelRequired>
+    <initialWillRange>13~15</initialWillRange>
+    <initialResistanceRange>16~32</initialResistanceRange>
+  </PawnKindDef> 
+  
+  <PawnKindDef ParentName="TraderBase">
+    <defName>Persona_Trader</defName>
+    <label>persona trader</label>
+    <apparelIgnorePollution>true</apparelIgnorePollution>		
+	<backstoryFiltersOverride Inherit="False">
+      <li>
+        <categories>	
+            <li>BackstoriesPersona</li>
+        </categories>
+      </li>	  
+    </backstoryFiltersOverride>	
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RRB_Persona>999</RRB_Persona>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelRequired Inherit="False">
+      <li>Apparel_BowlerHat</li>
+	  <li>Apparel_PackControl</li>
+    </apparelRequired>
+    <initialWillRange>10~12</initialWillRange>
+    <initialResistanceRange>13~20</initialResistanceRange>	
+  </PawnKindDef> 
+
+</Defs>

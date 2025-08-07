@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<XenotypeIconDef>
+		<defName>RRB_TuringXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Turing</texPath>
+	</XenotypeIconDef>
+
+	<XenotypeIconDef>
+		<defName>RRB_RobotXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Robot</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_CyborgXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Cyborg</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_GiantXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Giant</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_JetsonXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Jetson</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_DroidXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Droid</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_ScytherXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Scyther</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_StellarisXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Stellaris</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_UfoXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Ufo</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_WestworldXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Westworld</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_NecronXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Necron</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_BenderXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Bender</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>RRB_WheatleyXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Wheatley</texPath>
+	</XenotypeIconDef>	
+	
+	<XenotypeIconDef>
+		<defName>RRB_EveXenotypeIcon</defName>
+		<texPath>UI/Icons/Genes/Xenotype/Eve</texPath>
+	</XenotypeIconDef>		
+	
+</Defs>

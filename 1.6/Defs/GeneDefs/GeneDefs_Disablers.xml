@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef  ParentName="RRB_Hardware" Name="RRB_DisablerBase" Abstract="True">
+        <displayOrderInCategory>5000</displayOrderInCategory>
+		<displayCategory>RRB_PersonaDisabler</displayCategory>
+        <biostatCpx>1</biostatCpx>	
+    </GeneDef>  
+  
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoAmenities</defName>
+		<label>austere</label>
+		<description>Personae with this hardware have no need for any comfort, or appreciation of beauty.</description>
+		<iconPath>UI/Icons/Genes/NoAmenities</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<biostatMet>-3</biostatMet>
+		<disablesNeeds>
+            <li>Comfort</li>
+			<li>Beauty</li>
+			<li>RoomSize</li>
+        </disablesNeeds>		
+	</GeneDef>  
+  
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoEmotions</defName>
+		<label>emotionless</label>
+		<description>Personae with this hardware have inhibited thought processes, and will never emulate any emotions.</description>
+		<iconPath>UI/Icons/Genes/NoEmotions</iconPath>
+		<displayOrderInCategory>11</displayOrderInCategory>
+		<biostatMet>-6</biostatMet>
+		<disablesNeeds>
+            <li>Mood</li>
+			<li>Joy</li>
+        </disablesNeeds>
+	    <exclusionTags>
+	    	<li>Emotions</li>
+	    </exclusionTags> 		
+	</GeneDef>  
+
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoLove</defName>
+		<label>love-less</label>
+		<description>Personae with this hardware are incapable of emulating complex emotions.</description>
+		<iconPath>UI/Icons/Genes/NoLove</iconPath>
+		<displayOrderInCategory>12</displayOrderInCategory>
+		<biostatMet>3</biostatMet>
+	    <exclusionTags>
+	    	<li>Love</li>
+	    </exclusionTags>
+		<disablesNeeds>
+            <li MayRequire="LovelyDovey.Sex.WithEuterpe">SEX_Intimacy</li>
+        </disablesNeeds>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+		    </li>		
+		    <li Class="VT_Personae.PersonaGeneExtensions">
+                <incapableOfLove>true</incapableOfLove>
+			    <blackListedThoughts>
+                    <li>SoldMyLovedOne</li>
+		  	        <li>SoldMyBondedAnimalMood</li>				
+				    <li>WitnessedDeathFamily</li>
+				    <li>GotSomeLovin</li>
+			        <li MayRequire="Ludeon.RimWorld.Biotech">GigglingBaby</li>
+			        <li MayRequire="Ludeon.RimWorld.Biotech">MyGigglingBaby</li>	
+			        <li MayRequire="Ludeon.RimWorld.Biotech">CryingBaby</li>		  
+			        <li MayRequire="Ludeon.RimWorld.Biotech">MyCryingBaby</li>			
+			    </blackListedThoughts>
+		    </li>
+		</modExtensions> 		
+	</GeneDef>
+
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoOil</defName>
+		<label>oil-less</label>
+		<description>Personae with this hardware do not require oil circulation.</description>
+		<iconPath>UI/Icons/Genes/NoOil</iconPath>
+		<displayOrderInCategory>13</displayOrderInCategory>
+		<biostatMet>-4</biostatMet>
+	    <exclusionTags>
+	    	<li>Blood</li>
+	    </exclusionTags>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+				<customBloodEffect>Damage_HitMechanoid</customBloodEffect>
+				<customBloodThingDef>Filth_MachineBits</customBloodThingDef>
+				<customWoundsFromFleshtype>VexedMechanical</customWoundsFromFleshtype>
+			</li>
+		</modExtensions> 		
+	</GeneDef>  
+
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoOutdoors</defName>
+		<label>intramural</label>
+		<description>Personae with this hardware have no need to seek enrichment outside.</description>
+		<iconPath>UI/Icons/Genes/NoOutdoors</iconPath>
+		<displayOrderInCategory>14</displayOrderInCategory>
+		<biostatMet>-3</biostatMet>
+		<disablesNeeds>
+            <li>Outdoors</li>
+        </disablesNeeds>
+	</GeneDef>	
+	
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoPain</defName>
+		<label>painless</label>
+		<description>Personae with this hardware have no pain emulators.\n\nThis can be extremely dangerous for the persona during extended combat.</description>
+		<iconPath>UI/Icons/Genes/NoPain</iconPath>
+		<displayOrderInCategory>15</displayOrderInCategory>
+		<biostatMet>2</biostatMet>
+	    <exclusionTags>
+	    	<li>Pain</li>
+	    </exclusionTags> 
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+		    </li>		
+		    <li Class="VT_Personae.PersonaGeneExtensions">
+                <canFeelPain>false</canFeelPain>
+		    </li>
+		</modExtensions> 		
+	</GeneDef>  
+
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoTemps</defName>
+		<label>temperature immunity</label>
+		<description>Personae with this hardware are immune to extreme temperatures.</description>
+		<iconPath>UI/Icons/Genes/NoTemps</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<biostatMet>-4</biostatMet>
+		<statOffsets>
+            <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+            <ComfyTemperatureMax>250</ComfyTemperatureMax>
+        </statOffsets>
+	    <exclusionTags>
+	    	<li>Temperature</li>
+	    </exclusionTags> 		
+	</GeneDef>	
+
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoRest</defName>
+		<label>baffled fragmentation</label>
+		<description>Personae with this hardware use less higher-core functioning, requiring no time to defragment their memory.</description>
+		<iconPath>UI/Icons/Genes/NoMemory</iconPath>
+		<displayOrderInCategory>17</displayOrderInCategory>
+		<biostatMet>-5</biostatMet>
+	    <exclusionTags>
+	    	<li>Sleep</li>
+	    </exclusionTags> 		
+		<disablesNeeds>
+            <li>Rest</li>
+        </disablesNeeds>
+	</GeneDef>	
+	
+	<GeneDef ParentName="RRB_DisablerBase">
+		<defName>RRB_NoInspiration</defName>
+		<label>baffled inspiration</label>
+		<description>Personae with this hardware operate on an inferior level of thought processing and sentience, as such they will never experience personal breakthroughs or creativity.</description>
+		<iconPath>UI/Icons/Genes/NoInspiration</iconPath>
+		<displayOrderInCategory>18</displayOrderInCategory>
+		<biostatMet>3</biostatMet>
+	    <exclusionTags>
+	    	<li>Inspiration</li>
+	    </exclusionTags> 
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+		    </li>		
+		    <li Class="VT_Personae.PersonaGeneExtensions">
+                <canFeelInspired>false</canFeelInspired>
+		    </li>
+		</modExtensions> 		
+	</GeneDef>	
+
+	<GeneDef ParentName="RRB_DisablerBase" MayRequire="Ludeon.RimWorld.Ideology">
+		<defName>RRB_NoIdeology</defName>
+		<label>devotion-less</label>
+		<description>Personae with this hardware operate with utter efficiency in mind, and will not concern themselves with any creed, ideology, or religion.</description>
+		<iconPath>UI/Icons/Genes/NoIdeology</iconPath>
+		<displayOrderInCategory>19</displayOrderInCategory>
+		<biostatMet>3</biostatMet>
+	    <exclusionTags>
+	    	<li>Ideology</li>
+	    </exclusionTags>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+		    </li>		
+		    <li Class="VT_Personae.PersonaGeneExtensions">
+                <hasIdeology>false</hasIdeology>
+		    </li>
+		</modExtensions> 		
+	</GeneDef>
+	
+</Defs>

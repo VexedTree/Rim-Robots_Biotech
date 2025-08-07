@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<GeneDef Name="RRB_Archite" Abstract="True">
+		<displayCategory>RRB_Archite</displayCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_ArchiteGene</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/GeneBackground_ArchiteGene</backgroundPathEndogenes>
+			</li>
+			<li Class="VT_Personae.PersonaGeneExtensions"/>	<!-- We use this as a fall-back. Any pawn with a gene that has this extension is considered a persona pawn. --> 
+		</modExtensions>
+	</GeneDef>	
+
+	<GeneDef Name="RRB_Hardware" Abstract="True">
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>			
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>
+			</li>
+		    <li Class="VT_Personae.PersonaGeneExtensions"/>	<!-- We use this as a fall-back. Any pawn with a gene that has this extension is considered a persona pawn. --> 		
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef Name="RRB_Voidware" Abstract="True">
+		<displayCategory>RRB_Anomaly</displayCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/AnomalyBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/AnomalyBackground</backgroundPathEndogenes>
+			</li>
+			<li Class="VT_Personae.PersonaGeneExtensions"/>	<!-- We use this as a fall-back. Any pawn with a gene that has this extension is considered a persona pawn. --> 
+		</modExtensions>
+	</GeneDef>	
+	
+</Defs>

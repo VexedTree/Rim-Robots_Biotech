@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<IdeoPresetDef MayRequire="Ludeon.Rimworld.Ideology">
+		<defName>RR_Biological_Exterminators</defName>
+		<label>mechanical-exterminators</label>
+		<description>We will cleanse this universe of its biological aberrations - we will command legions of steel, we will sail to billions of infested worlds, and bathe the stars in fire.</description>
+		<categoryDef>Intense</categoryDef>
+		<memes>
+			<li>RR_MechanicalPrimacy</li>
+			<li>Raider</li>
+			<li>Proselytizer</li>
+		</memes>
+	</IdeoPresetDef>
+
+</Defs>

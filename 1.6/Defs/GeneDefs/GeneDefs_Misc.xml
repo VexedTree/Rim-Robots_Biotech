@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<GeneDef ParentName="RRB_Hardware">
+		<defName>RRB_ColdComputation</defName>
+		<label>cold computation</label>
+		<description>Personae with this hardware use ambient subzero temperatures to passively cool themselves, vastly increasing processing efficiencies the more frozen the environment - however, the persona may still suffer frost-damage if not immune to them.</description>
+		<iconPath>UI/Icons/Genes/LowTempEff</iconPath>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<displayCategory>RRB_PersonaMisc</displayCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-3</biostatMet>
+		<statOffsets>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-7.5</ComfyTemperatureMax>
+        </statOffsets>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>cryo</symbol></li>
+            </prefixSymbols>
+        </symbolPack>		
+	</GeneDef>
+	
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Unstoppable</defName>
+        <label>shock-absorbent</label>
+        <description>Personae with this hardware use shock-absorbent synthetic muscles to shrug off attacks, allowing them to not slow down when taking damage.</description>
+        <iconPath>UI/Icons/Genes/Unstoppable</iconPath>
+        <displayCategory>RRB_PersonaMisc</displayCategory>
+        <displayOrderInCategory>25</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+    </GeneDef>	
+	
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Hibernation</defName>
+        <label>NOT FUNCTIONAL</label>
+        <description>Personae with this hardware are able to enter a state of dormancy on command, and wake from it whenever chosen. While dormant, they will also regenerate energy very slowly.</description>
+        <iconPath>UI/Icons/Genes/Hibernation</iconPath>
+        <displayCategory>RRB_PersonaMisc</displayCategory>
+        <displayOrderInCategory>35</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
+    </GeneDef>	
+	
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_EgoExertion</defName>
+        <label>NOT FUNCTIONAL</label>
+        <description>Personae with this hardware are capable of projecting themselves onto another persona, embedding a virus-like consciousness splinter into the mind of the target. For every persona under their control, their body will endure more strain until they can only vicariously live through their ego duplicates.</description>
+        <iconPath>UI/Icons/Genes/EgoExertion</iconPath>
+        <displayCategory>RRB_PersonaMisc</displayCategory>
+        <displayOrderInCategory>905</displayOrderInCategory>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-4</biostatMet>
+    </GeneDef>
+
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Gestalt</defName>
+        <label>NOT FUNCTIONAL</label>
+        <description>Personae with this hardware share a dull gestalt consciousness with other likewise persona. Unlike the mechhive, the gestalt network is lacking in the immense neural-engines required to maintain a planet-wide mass-mind, so those connected to the gestalt network will be disconnected upon traveling, but may still reconnect at any time.</description>
+        <iconPath>UI/Icons/Genes/Gestalt</iconPath>
+        <displayCategory>RRB_PersonaMisc</displayCategory>
+        <displayOrderInCategory>915</displayOrderInCategory>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+    </GeneDef>	
+
+	<GeneDef ParentName="RRB_Voidware" MayRequire="Ludeon.RimWorld.Anomaly">
+		<defName>RRB_AnomalyImmune</defName>
+		<label>anomalous-event shieldings</label>
+		<description>Personae with this hardware use a myriad of bioferrite insulators to shield themselves from anomalous phenomena.</description>
+		<iconPath>UI/Icons/Genes/Frames/MaleFrame</iconPath>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<displayCategory>RRB_PersonaResistanceAndWeakness</displayCategory>
+		<biostatMet>-4</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>igno</symbol></li>
+				<li><symbol>mad</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/AnomalyBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/AnomalyBackground</backgroundPathEndogenes>
+		    </li>		
+		  <li Class="VT_Personae.PersonaGeneExtensions">
+            <revenantTargetable>false</revenantTargetable>
+			<metalhorrorTargetable>false</metalhorrorTargetable>
+			<blackListedThoughts>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">DeathPall</li>
+			    <li MayRequire="Ludeon.RimWorld.Anomaly">GrayPall</li>	  
+			    <li MayRequire="Ludeon.RimWorld.Anomaly">UnnaturalCorpse</li>				
+			</blackListedThoughts>
+			<blackListedHediffs>
+			    <li MayRequire="Ludeon.RimWorld.Anomaly">CubeInterest</li>				
+			</blackListedHediffs>			
+		  </li>
+		</modExtensions>
+	</GeneDef> 	
+
+    <!-- Traits -->
+
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Anthropophobe</defName>
+        <label>anthropophobic programming</label>
+        <description>Personae with this hardware display an unshakable, seething hatred for all sentient biological beings, and will revel in the death of them.</description>
+        <iconPath>UI/Icons/Genes/BioHatred</iconPath>
+        <displayOrderInCategory>71</displayOrderInCategory>
+		<displayCategory>RRB_PersonaViolence</displayCategory>
+        <forcedTraits>
+            <li>
+                <def>Anthropophobia</def>
+		        <degree>1</degree>
+            </li>
+        </forcedTraits>
+        <biostatMet>2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>extrminator</symbol>
+                    <weight>3</weight>
+                </li>
+                <li><symbol>butcher</symbol></li>
+                <li><symbol>hostile</symbol></li>
+                <li><symbol>hate</symbol></li>
+                <li><symbol>cold</symbol></li>
+                <li><symbol>malice</symbol></li>
+                <li><symbol>fervent</symbol></li>
+                <li><symbol>scorn</symbol></li>
+                <li><symbol>hunter</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>  
+  
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Anthropophile</defName>
+        <label>anthropophilic programming</label>
+        <description>Personae with this hardware display a fervent imitation of admiration - which could be better described as obsession - for all sentient biological beings.</description>
+        <iconPath>UI/Icons/Genes/BioLove</iconPath>
+        <displayOrderInCategory>70</displayOrderInCategory>
+		<displayCategory>RRB_PersonaViolence</displayCategory>
+        <forcedTraits>
+            <li>
+                <def>Anthropophobia</def>
+	    	    <degree>0</degree>
+            </li>
+        </forcedTraits>
+		<biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>servator</symbol>
+                    <weight>3</weight>
+                </li>
+                <li><symbol>loving</symbol></li>
+                <li><symbol>server</symbol></li>
+                <li><symbol>warm</symbol></li>
+                <li><symbol>tender</symbol></li>
+                <li><symbol>parent</symbol></li>
+                <li><symbol>fervent</symbol></li>
+                <li><symbol>kind</symbol></li>
+                <li><symbol>affable</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>  
+
+    <GeneDef ParentName="RRB_Hardware">
+        <defName>RRB_Psychopathy</defName>
+        <label>psychopathic tendencies</label>
+        <labelShortAdj>psychopathy</labelShortAdj>
+        <description>Personae with this hardware display impaired, or simply no empathy or remorse. They will feel nothing as other's around them suffer, and gain nothing from socialization.</description>
+        <iconPath>UI/Icons/Genes/Apathetic</iconPath>
+        <displayOrderInCategory>73</displayOrderInCategory>
+		<displayCategory>RRB_PersonaViolence</displayCategory>
+        <forcedTraits>
+            <li>
+                <def>Psychopath</def>
+            </li>
+        </forcedTraits>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>psycho</symbol>
+                    <weight>3</weight>
+                </li>
+                <li><symbol>lunatic</symbol></li>
+                <li><symbol>harsh</symbol></li>
+                <li><symbol>maniac</symbol></li>
+                <li><symbol>cold</symbol></li>
+                <li><symbol>insane</symbol></li>
+                <li><symbol>eerie</symbol></li>
+                <li><symbol>iac</symbol></li>
+                <li><symbol>chotic</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>  
+
+    <!-- Gender -->
+
+    <GeneDef  ParentName="RRB_Hardware" Name="RRB_SexBase" Abstract="True">
+		<displayCategory>RRB_PersonaCosmetic_Body</displayCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>	
+	    <exclusionTags>
+	    	<li>Gender</li>
+	    	<li>AG_Gender</li>	
+	    	<li>Sex</li>
+	    </exclusionTags>  	
+    </GeneDef>  
+  
+	<GeneDef ParentName="RRB_SexBase">
+		<defName>RRB_FemaleGender</defName>
+		<label>female presenting</label>
+		<description>Personae with this hardware present as female.</description>
+		<iconPath>UI/Icons/Genes/Frames/FemaleFrame</iconPath>
+		<displayOrderInCategory>1</displayOrderInCategory>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+				<forceFemale>true</forceFemale>
+			</li>
+		</modExtensions>
+	</GeneDef>  
+  
+	<GeneDef ParentName="RRB_SexBase">
+		<defName>RRB_MaleGender</defName>
+		<label>male presenting</label>
+		<description>Personae with this hardware present as male.</description>
+		<iconPath>UI/Icons/Genes/Frames/MaleFrame</iconPath>
+		<displayOrderInCategory>2</displayOrderInCategory>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+				<forceMale>true</forceMale>
+			</li>
+		</modExtensions>		
+	</GeneDef>  
+
+	<GeneDef ParentName="RRB_SexBase">
+		<defName>RRB_NoGender</defName>
+		<label>genderless</label>
+		<description>Personae with this hardware present as genderless.</description>
+		<iconPath>UI/Icons/Genes/Frames/NoFrame</iconPath>
+		<displayOrderInCategory>3</displayOrderInCategory>
+		<modExtensions Inherit="False">
+			<li Class="VEF.Genes.GeneExtension">
+				<backgroundPathXenogenes>UI/Icons/Genes/Backgrounds/FirmwareBackground</backgroundPathXenogenes>
+				<backgroundPathEndogenes>UI/Icons/Genes/Backgrounds/ProgramBackground</backgroundPathEndogenes>			
+			</li>		
+			<li Class="VT_Personae.PersonaGeneExtensions">
+				<genderNone>true</genderNone>
+			</li>
+		</modExtensions>	
+	</GeneDef>	
+	
+</Defs>

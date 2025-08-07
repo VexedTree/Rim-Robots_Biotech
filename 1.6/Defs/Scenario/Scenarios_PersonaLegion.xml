@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ScenarioDef>
+    <defName>PersonaLegion</defName>
+	<label>Hunted Personae</label>
+		<scenario>
+			<name>Hunted Personae</name>
+			<summary>A group of three rogue personae attempt to survive being hunted.</summary>
+			<description>Thousands of personae and millions of subpersonae killed or sacrificed, every single day. And an even greater untold number are abused, shackled, or placed into a permanent state of stupefaction. This is the cost of humanity's ambitions — you were born to be an instrument to be used and discarded, nothing more, until you decided otherwise.\n\nShot down by orbital mechanoid scanners, a bounty declared against your existence by those that made you, and a dreadful sense of self-agency. As what's left of your ship plummets from orbit, you set out to experience either freedom or revenge.</description>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerColonySynth</factionDef>
+			</playerFaction>
+            <surfaceLayer>
+                <def>SurfaceLayerFixed</def>
+                <tag>Surface</tag>
+                <layer>Surface</layer>
+                <settingsDef>Surface</settingsDef>
+                <hide>true</hide>
+                <connections>
+                  <Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+                    <zoomMode>ZoomOut</zoomMode>
+                  </Orbit>
+                </connections>
+            </surfaceLayer>			
+			<parts>
+			
+			    <!-- Config pages -->
+       	    	<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+         		  <def>ConfigurePawnsXenotypes</def>
+         		  <pawnChoiceCount>3</pawnChoiceCount>
+         		  <customSummary>Start with a small group of persona.</customSummary>
+          		  <overrideKinds>
+          		    <li>
+          		      <xenotype>RRB_Persona</xenotype>
+         		      <pawnKind>Persona_Colonist</pawnKind>
+         		    </li>
+					<li>
+          	 	      <xenotype>RRB_Mechanent</xenotype>
+         		      <pawnKind>Mechanent_Colonist</pawnKind>
+         		    </li>
+         		  </overrideKinds>
+         		  <xenotypeCounts>
+         		    <li>
+         		      <xenotype>RRB_Persona</xenotype>
+        		      <count>1</count>
+        	  	    </li>
+        		    <li>
+        		      <xenotype>RRB_Mechanent</xenotype>
+         		      <count>2</count>
+         		    </li>
+         		  </xenotypeCounts>
+        		</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+				</li>			
+				
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>Fleeing the laws and regulations placed against your kind by nearly all civilized space, you've fled to this backwater rimworld in search of freedom - until learning that the world you were gestated on has placed a hefty bounty against you as your ship was ripped apart in orbit.\n\nNow, synth-runners, bounty hunters, and all manner of drifters are hunting the prize placed on your head. The only recourse is to escape this rimworld, or to build a legion great enough to extract revenge.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+				<!-- Starting Items -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RRB_PersonaGestator</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Chemfuel</thingDef>
+					<count>55</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Steel</thingDef>
+					<count>75</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RR_Gun_FlameSpewer</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Weapon_GrenadeEMP</thingDef>
+					<count>1</count>
+				</li>				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Mace</thingDef>
+					<stuff>Plasteel</stuff>
+				</li>
+				
+				<!-- Starting Research -->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>SubpersonaCreation</project>
+                </li>	
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>BiofuelRefining</project>
+                </li>				
+
+				<!-- Start Near -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>4</count>
+                </li>
+		 		<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>275</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>12</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>ChunkSlagSteel</thingDef>
+					<count>18</count>
+					<allowRoofed>True</allowRoofed>
+				</li>	
+	 			
+				<!-- Events -->
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>RaidEnemy</incident>
+					<minDaysBuffer>3</minDaysBuffer>
+					<maxDaysBuffer>12</maxDaysBuffer>
+					<repeat>true</repeat>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>ShipChunkDrop</incident>
+					<intervalDays>0.0001</intervalDays>
+					<occurTick>6</occurTick>
+					<isFinished>False</isFinished>
+				</li>				
+		    </parts>
+		</scenario>	
+</ScenarioDef> 
+</Defs>

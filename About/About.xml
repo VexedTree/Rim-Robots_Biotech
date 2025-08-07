@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData> 
+	<name>Rim-Robots_ Biotech</name> 
+	<author>VexedTrees</author>		
+	<packageId>VexedTrees980.RimRobots_Biotech</packageId>
+	<description>This is a version of Rim-Robots that doesn't require Humanoid Alien Races --- Have you ever wanted to add a lightweight robot/android mod to your modlist, but most of them seemed a little too heavy or otherwise didn't fully fit into the vanilla aesthetic? Then this mod is hopefully for you.\nThe mod adds just enough content for a robot-oriented playthrough, while also being light and balanced enough that it can fit right into the backseat of your regular playthrough and be barely noticed.</description>		
+	<modIconPath IgnoreIfNoMatchingField="True">UI/Icons/Genes/Xenotype/Mechanent</modIconPath>
+	<supportedVersions>
+	    <li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+        <li>
+            <packageId>ludeon.rimworld.biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+        <li>
+            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+        </li>	
+	</modDependencies>
+	<incompatibleWith>
+		<li>VexedTrees980.RimRobots</li>
+	</incompatibleWith>	
+</ModMetaData>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleshTypeDef>
+    <defName>VexedMechanical</defName>
+    <corpseCategory>CorpsesMechanoid</corpseCategory>
+    <damageEffecter>Damage_HitMechanoid</damageEffecter>
+    <genericWounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundMechA</texture>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundMechB</texture>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundMechC</texture>
+      </li>
+    </genericWounds>
+  </FleshTypeDef>
+  
+  <FleshTypeDef>
+    <defName>VexedChemical</defName>
+    <corpseCategory>CorpsesMechanoid</corpseCategory>
+    <damageEffecter>RRB_Damage_HitChemfuel</damageEffecter>
+    <genericWounds>
+      <li>
+        <texture>Misc/ChemfuelBlood/ChemfuelWoundA</texture>
+      </li>
+      <li>
+        <texture>Misc/ChemfuelBlood/ChemfuelWoundB</texture>
+      </li>
+      <li>
+        <texture>Misc/ChemfuelBlood/ChemfuelWoundC</texture>
+      </li>
+    </genericWounds>
+  </FleshTypeDef>
+  
+</Defs>

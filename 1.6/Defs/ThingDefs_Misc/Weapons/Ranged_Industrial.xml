@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RR_Gun_FlameSpewer</defName>
+    <label>flamespewer</label>
+    <description>A pressurized canister-operated flamethrower, designed to project a stream of fiery liquid at range. Incredibly effective at starting fires and burning flesh.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Items/Weapons/FlameSpewer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0.3</generateCommonality> 	
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>85</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+	  <Chemfuel>50</Chemfuel>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>460</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_SpewFire</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.5</warmupTime>
+        <range>6.9</range>	
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>Shot_MiniFlameblaster</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>	
+		<ai_BeamIsIncendiary>true</ai_BeamIsIncendiary>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>		
+      </li>
+    </verbs>
+    <weaponTags>
+	  <li>HumanlikeMechanoidFire</li>
+	  <li>GunIncendiary</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

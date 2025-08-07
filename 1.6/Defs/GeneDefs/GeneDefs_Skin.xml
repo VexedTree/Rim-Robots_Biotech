@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+  <!-- Skins -->
+
+	<GeneDef  ParentName="GeneSkinColorOverride">
+		<defName>RRB_NewMechanoidSkin</defName>
+		<label>aged metal skin</label>
+		<labelShortAdj>mech</labelShortAdj>
+		<description>Carriers of this produce an almost aged, metallic pigment in their skin</description>
+		<iconPath>UI/Icons/Genes/Frames/StandardFrame</iconPath>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<displayOrderInCategory>90</displayOrderInCategory>
+		<skinColorOverride>(1.0,1.0,1.0)</skinColorOverride>
+	</GeneDef>	
+	
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>RRB_MechanoidSkin</defName>
+		<label>weathered metal skin</label>
+		<labelShortAdj>mech</labelShortAdj>
+		<description>Carriers of this produce a weathered looking, metallic pigment in their skin.</description>
+		<iconPath>UI/Icons/Genes/Frames/StandardFrame</iconPath>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<displayOrderInCategory>91</displayOrderInCategory>
+		<skinColorOverride>(203,207,195)</skinColorOverride>
+	</GeneDef>	
+  
+	<GeneDef  ParentName="GeneSkinColorOverride">
+		<defName>RRB_WeatheredMechanoidSkin</defName>
+		<label>aged metal skin</label>
+		<labelShortAdj>mech</labelShortAdj>
+		<description>Carriers of this produce an almost aged, metallic pigment in their skin</description>
+		<iconPath>UI/Icons/Genes/Frames/StandardFrame</iconPath>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<displayOrderInCategory>92</displayOrderInCategory>
+		<skinColorOverride>(178,183,162)</skinColorOverride>
+	</GeneDef>	
+	
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>RRB_AncientMechanoidSkin</defName>
+		<label>weathered metal skin</label>
+		<labelShortAdj>mech</labelShortAdj>
+		<description>Carriers of this produce a weathered looking, metallic pigment in their skin.</description>
+		<iconPath>UI/Icons/Genes/Frames/StandardFrame</iconPath>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<displayOrderInCategory>93</displayOrderInCategory>
+		<skinColorOverride>(158,163,142)</skinColorOverride>
+	</GeneDef>	
+	
+</Defs>

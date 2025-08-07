@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_FuelSmear</defName>
+    <label>chemfuel smear</label>
+	<useHitPoints>true</useHitPoints>
+    <statBases>
+      <Beauty>-30</Beauty>
+      <Cleanliness>-10</Cleanliness>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>2.0</Flammability>
+    </statBases>	
+    <graphicData>
+      <texPath>Things/Filth/CrawlSmear</texPath>
+      <color>(168, 123, 86, 165)</color>
+      <graphicClass>Graphic_ClusterTight</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+	<filth>
+		<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+		<disappearsInDays>35~40</disappearsInDays>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+		<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+	</filth>	
+  </ThingDef>	
+  
+</Defs>

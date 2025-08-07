@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>			
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/StatDef[defName="WorkSpeedGlobal"]/parts</xpath>
+				<value>
+					<li Class="VT_Personae.PersonaColdComputation"></li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd"> 
+				<xpath>/Defs/ThingDef[@Name="BasePawn"]/statBases</xpath>
+				<value>
+					<TendSpeed_Synth>1</TendSpeed_Synth>
+				</value>
+			</li>		
+		</operations>
+	</Operation>
+
+</Patch>

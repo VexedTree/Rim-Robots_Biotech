@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Odyssey</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/FactionDef[@Name="TradersGuild"]/xenotypeSet/xenotypeChances</xpath>
+	    	<value>		
+	    		<RRB_Mechanent>0.02</RRB_Mechanent>
+	    		<RRB_Persona>0.01</RRB_Persona>	
+	    	</value>
+        </match>
+    </Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+		<value>		
+			<RRB_Mechanent>0.022</RRB_Mechanent>
+			<RRB_Persona>0.01</RRB_Persona>	
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="PirateBandBase"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<RRB_Mechanent>0.020</RRB_Mechanent>
+			<RRB_Persona>0.008</RRB_Persona>	
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName="PirateWaster"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<RRB_Mechanent>0.020</RRB_Mechanent>
+		</value>
+	</Operation>	
+	
+</Patch>
